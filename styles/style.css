@@ -8,16 +8,6 @@ html {
   block-size: 100%;
 }
 
-.page {
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
-}
-
 h1,
 h2,
 h3,
@@ -35,4 +25,207 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.page {
+  display: flex;
+  block-size: 100%;
+  margin: auto;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  align-items: center;
+  background-color: #1b1919;
+  inline-size: 1200px;
+}
+/* video section*/
+.content {
+  display: flex;
+  gap: 30px;
+  margin: 0 30px;
+}
+.result {
+  align-self: flex-end;
+  gap: 16px;
+  flex-direction: column;
+}
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin: 0 0 11px;
+}
+.result__video {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+/*search section*/
+.search-form {
+  display: flex;
+  gap: 40px;
+}
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  gap: 5px;
+}
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.search-form__label:hover {
+  text-decoration: underline 1px #fff;
+  text-underline-offset: 5px;
+}
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+}
+.search-form__textfield {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: start;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  width: 225px;
+}
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+.search-form__pseudo-checkbox {
+  display: flex;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  display: block;
+  width: 15px;
+  height: 15px;
+  content: "";
+  background-color: #fff;
+  margin: 1px 0 0 1px;
+}
+
+/* button section*/
+.button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  height: 34px;
+  width: 194px;
+}
+.search-form__submit-button {
+  align-self: self-end;
+}
+.button:active {
+  background-color: #545050;
+}
+.button:hover {
+  text-decoration: underline;
+}
+.button:focus {
+  outline: none;
+}
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+.more-button {
+  width: 100%;
+}
+/* cities list section */
+.content__details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 21px;
+}
+.title {
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 94%;
+}
+.content__accent {
+  color: #545050;
+}
+.content__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: scroll;
+  scrollbar-width: none;
+  height: 298px;
+  gap: 30px;
+}
+.content__card-link {
+  display: block;
+  color:#fff;
+  text-decoration: none;
+}
+.content__card-link:active {
+  background-color: #545050;
+}
+.content__card-link:hover {
+  text-decoration: underline 1px #FFF;
+}
+.content__card-link:focus {
+  outline: none;
+}
+.content__card-lint:focus-visible {
+  outline: 1px solid #fff;
+}
+.content__card-link_current {
+  background: #545050;
+}
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  width: 398px;
+  height: 100%;
+}
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.content__video-card-description {
+  font-weight: 200;
+  line-height: 16.2px;
+}
+.content__video-card-thumbnail {
+  object-fit: cover;
+  width: 194px;
+  height: 103px;
 }
